@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bitcoin Header Serializer</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="titleBar">
+      <titleText>Bitcoin Header Serializer</titleText>
+    </div>
+    
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="blockNum" type="text" class="ghost-input" placeholder="Enter a block number" required>
+          <input type="submit" class="ghost-button" value="Serialize!">
+        </form>
+        <% if(serialized !== null){ %>
+          <div class="tooltip" >
+            <p class="serialized" id="serializedCopy"  onclick="copy()" onmouseout="showMsg()"><%= serialized %></p>
+
+            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+            </div>
+        <% } %>
+
+        <% if(err !== null){ %>
+          <p class="error"><%= err %></p>
+        <% } %>
+      </fieldset>
+    </div>
+    <script>
+
+      function copy() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("serializedCopy"));
+        window.getSelection().removeAllRanges(); 
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();        
+        const tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied!";
+      }
+      
+      function showMsg() {
+        const tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy to clipboard";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+/*
+  Styles from this codepen:
+  https://codepen.io/official_naveen/pen/rgknI
+*/
+
+body {
+    width: 900px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .container {
+    padding-top: 40px;
+    width: 900px;
+    margin: 0 auto;
+  }
+  fieldset {
+    display: block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0em;
+    -webkit-padding-start: 0em;
+    -webkit-padding-end: 0em;
+    -webkit-padding-after: 0em;
+    border: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    min-width: -webkit-min-content;
+    padding: 30px;
+  }
+  .ghost-input, p {
+    display: block;
+    font-weight:300;
+    width: 100%;
+    font-size: 50px;
+    border:0px;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #4b545f;
+    background: #fff;
+    font-family: Open Sans,Verdana;
+    padding: 10px 15px;
+    margin: 30px 0px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .ghost-input:focus {
+    border-bottom:1px solid #ddd;
+  }
+  .ghost-button {
+    background-color: transparent;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border:2px solid #ddd;
+    padding:10px 30px;
+    width: 100%;
+    min-width: 350px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .ghost-button:hover {
+    border:2px solid #515151;
+    background-color: #aaa7a7;
+
+  }
+  .error {
+    color: #E64A19;
+    font-size: 25px;
+
+  }
+  .serialized {
+    color: #4b545f;
+    border:2px solid #ddd;
+    font-size: 40px;
+    width: 900px;
+    word-wrap: break-word;
+  }
+  .serialized:hover {
+    background-color: #aaa7a7;
+  }
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  font-size: 15px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.titleBar {
+  overflow: hidden;
+  background-color: #333;
+  margin-left:-33%;
+  margin-right:-33%;
+  margin-top:-10px;
+
+}
+
+.titleBar titleText {
+  font-family: Arial, Helvetica, sans-serif;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 24px 16px;
+  width: 93%;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.titleBar:hover {
+	background-color: #000;
+}
